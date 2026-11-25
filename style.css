@@ -1,0 +1,182 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+--main-color: #0f172a; /* default color */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+
+body {
+background-image: url("https://images.unsplash.com/photo-1464618663641-bbdd760ae84a");
+background-size: cover;
+background-position: center;
+font-family: "Poppins", sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
+
+/* MAIN CONTAINER */
+.container {
+max-width: 900px;
+width: 100%;
+background: rgba(255,255,255,0.1);
+backdrop-filter: blur(15px);
+border-radius: 25px;
+box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+overflow: hidden;
+}
+
+.wrapper {
+display: grid;
+grid-template-columns: 3fr 4fr;
+}
+
+/* LEFT SIDE */
+.img_section {
+border-radius: 25px;
+background-image: url("https://images.unsplash.com/photo-1501630834273-4b5604d2ee31");
+background-size: cover;
+background-position: center;
+position: relative;
+padding: 2rem;
+}
+
+.default_info {
+text-align: center;
+}
+
+.default_info img {
+width: 80%;
+margin: 0 auto;
+}
+
+/* DAY */
+.default_info h2 {
+font-size: 3rem;
+color: var(--main-color);
+}
+
+/* DATE */
+.default_date {
+color: var(--main-color);
+opacity: 0.85;
+margin-bottom: 1rem;
+}
+
+/* TEMP */
+.weather_temp {
+font-size: 4rem;
+font-weight: 800;
+color: var(--main-color);
+}
+
+/* WEATHER TEXT */
+.cloudtxt {
+color: var(--main-color);
+font-weight: 600;
+letter-spacing: 1px;
+}
+
+/* RIGHT SIDE */
+.content_section {
+padding: 2rem;
+color: white;
+}
+
+/* SEARCH */
+.content_section form {
+margin-bottom: 2rem;
+position: relative;
+}
+
+.content_section form input {
+width: 80%;
+padding: 0.8rem;
+border-radius: 10px 0 0 10px;
+border: 1px solid #37474f;
+outline: none;
+font-size: 1.2rem;
+}
+
+.content_section form button {
+position: absolute;
+right: 0;
+top: 0;
+padding: 0.8rem 1rem;
+border-radius: 0 10px 10px 0;
+border: none;
+background: #31af85;
+color: white;
+cursor: pointer;
+}
+
+/* INFO */
+.day_info .content {
+display: flex;
+justify-content: space-between;
+margin: 10px 0;
+}
+
+.day_info .content .title {
+font-weight: 600;
+}
+
+.day_info .content .value {
+color: var(--main-color);
+font-weight: 600;
+}
+
+/* FORECAST */
+.list_content ul {
+display: flex;
+justify-content: space-between;
+margin-top: 2rem;
+padding: 1rem;
+border-radius: 15px;
+background: rgba(255,255,255,0.1);
+}
+
+.list_content li {
+text-align: center;
+transition: 0.3s;
+}
+
+.list_content li:hover {
+transform: scale(1.1);
+}
+
+/* ICON */
+.weather_icon {
+animation: float 3s ease-in-out infinite;
+}
+
+/* FADE ANIMATION */
+.icons {
+opacity: 0;
+}
+
+.icons.fadeIn {
+animation: fadeIn 0.5s forwards;
+animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+to {
+opacity: 1;
+}
+}
+
+/* FLOAT EFFECT */
+@keyframes float {
+0% { transform: translateY(0); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0); }
+}
